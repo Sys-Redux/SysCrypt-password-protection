@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SysCrypt</string>
+    <string name="app_tagline">🔐 Retro Encryption Tool</string>
+
+    <!-- Labels -->
+    <string name="label_plain_text">📝 PLAIN TEXT</string>
+    <string name="label_algorithm">🔧 ALGORITHM</string>
+    <string name="label_key">🔑 SECRET KEY</string>
+    <string name="label_encrypted_text">🔒 ENCRYPTED TEXT</string>
+
+    <!-- Hints -->
+    <string name="hint_plain_text">Type your message here...</string>
+    <string name="hint_key">Enter your secret key</string>
+    <string name="hint_encrypted_text">Encrypted output appears here...</string>
+
+    <!-- Footer -->
+    <string name="footer_text">© 2024 SysCrypt • Retro Security</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SysCrypt" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/retro_teal</item>
+        <item name="colorPrimaryVariant">@color/retro_dark_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/retro_cyan</item>
+        <item name="colorSecondaryVariant">@color/retro_light_blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Background -->
+        <item name="android:colorBackground">@color/retro_background</item>
+        <item name="android:windowBackground">@color/retro_background</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/retro_dark_blue</item>
+    </style>
+</resources>

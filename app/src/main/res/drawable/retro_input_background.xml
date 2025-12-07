@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- White background -->
+    <solid android:color="@color/retro_input_bg"/>
+
+    <!-- Rounded corners for that soft 90s look -->
+    <corners android:radius="8dp"/>
+
+    <!-- Bold border -->
+    <stroke
+        android:width="3dp"
+        android:color="@color/retro_input_stroke"/>
+
+</shape>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/retro_background">
+
+    <!-- App Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="32sp"
+        android:textColor="@color/retro_dark_blue"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="8dp"
+        android:textAllCaps="true"
+        android:letterSpacing="0.15"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_tagline"
+        android:textSize="14sp"
+        android:textColor="@color/retro_teal"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Top Field: Plain Text Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_plain_text"
+        android:textColor="@color/retro_dark_blue"
+        android:textSize="14sp"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/plain_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/retro_input_background"
+        android:padding="12dp"
+        android:gravity="top|start"
+        android:hint="@string/hint_plain_text"
+        android:textColor="@color/retro_text"
+        android:textColorHint="@color/retro_hint"
+        android:fontFamily="monospace"
+        android:textSize="16sp"
+        android:inputType="textMultiLine"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Middle Row: Algorithm Dropdown + Key Input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- Algorithm Dropdown -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_algorithm"
+                android:textColor="@color/retro_dark_blue"
+                android:textSize="14sp"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/algorithm_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:background="@drawable/retro_spinner_background"
+                android:popupBackground="@color/retro_light_blue"/>
+        </LinearLayout>
+
+        <!-- Key Input -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_key"
+                android:textColor="@color/retro_dark_blue"
+                android:textSize="14sp"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="4dp"/>
+
+            <EditText
+                android:id="@+id/key_input"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/retro_input_background"
+                android:padding="12dp"
+                android:hint="@string/hint_key"
+                android:textColor="@color/retro_text"
+                android:textColorHint="@color/retro_hint"
+                android:fontFamily="monospace"
+                android:textSize="16sp"
+                android:inputType="textPassword"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Encryption Direction Indicator -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⬆ DECRYPT  •  ENCRYPT ⬇"
+            android:textColor="@color/retro_teal"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"/>
+    </LinearLayout>
+
+    <!-- Bottom Field: Encrypted Text Output -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_encrypted_text"
+        android:textColor="@color/retro_dark_blue"
+        android:textSize="14sp"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/encrypted_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/retro_input_background"
+        android:padding="12dp"
+        android:gravity="top|start"
+        android:hint="@string/hint_encrypted_text"
+        android:textColor="@color/retro_text"
+        android:textColorHint="@color/retro_hint"
+        android:fontFamily="monospace"
+        android:textSize="16sp"
+        android:inputType="textMultiLine"/>
+
+    <!-- Footer -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/footer_text"
+        android:textColor="@color/retro_teal"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>
