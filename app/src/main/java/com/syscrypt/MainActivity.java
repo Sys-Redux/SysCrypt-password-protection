@@ -8,7 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.syscrypt.crypto.CryptoManager;
 
@@ -82,8 +81,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 if (!isProcessing) {
-                    // Re-encrypt if plain text has content
-                    if (plainTextInput.getText().length() > 0) {
+                    // Determine which field has focus or content to process
+                    if (plainTextInput.hasFocus() && plainTextInput.getText().length() > 0) {
+                        performEncryption();
+                    } else if (encryptedTextInput.hasFocus() && encryptedTextInput.getText().length() > 0) {
+                        performDecryption();
+                    } else if (plainTextInput.getText().length() > 0) {
+                        // Default to encryption if plain text has content
                         performEncryption();
                     }
                 }
@@ -91,12 +95,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
         });
 
@@ -133,14 +135,13 @@ public class MainActivity extends AppCompatActivity {
             encryptedTextInput.setText(encrypted);
         } catch (Exception e) {
             encryptedTextInput.setText("");
-            showError("Encryption failed: " + e.getMessage());
         } finally {
             isProcessing = false;
         }
     }
 
     private void performDecryption() {
-        String cipherText = encryptedTextInput.getText().toString();
+        String cipherText = encryptedTextInput.getText().toString().trim();
         String key = keyInput.getText().toString();
 
         if (cipherText.isEmpty() || key.isEmpty()) {
@@ -154,15 +155,9 @@ public class MainActivity extends AppCompatActivity {
 
             String decrypted = cryptoManager.decrypt(cipherText, key, algorithm);
             plainTextInput.setText(decrypted);
+            isProcessing = false;
         } catch (Exception e) {
-            plainTextInput.setText("");
-            showError("Decryption failed: Check your key and encrypted text");
-        } finally {
             isProcessing = false;
         }
-    }
-
-    private void showError(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
