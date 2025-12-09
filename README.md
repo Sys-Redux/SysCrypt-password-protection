@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="app/src/main/ic_launcher-playstore.png" alt="SysCrypt Logo" width="150"/>
+  <img src="docs/images/main-img.png" alt="SysCrypt - Retro Encryption Tool" width="800"/>
 </p>
 
 <h1 align="center">🔐 SysCrypt</h1>
@@ -34,6 +34,10 @@ I built **SysCrypt** as a sleek, retro-inspired Android application designed for
 
 The app features **live encryption/decryption** — as you type, your text is instantly transformed, making it seamless to work with encrypted content without extra button clicks.
 
+<p align="center">
+  <img src="docs/images/promo-banner.png" alt="What is SysCrypt?" width="700"/>
+</p>
+
 ---
 
 ## ✨ Features
@@ -45,6 +49,10 @@ The app features **live encryption/decryption** — as you type, your text is in
 - 🔑 **Password-Based Key Derivation** — Secure key generation from user passphrases
 - 📋 **Bi-directional Processing** — Encrypt plain text or decrypt cipher text seamlessly
 - ⚡ **Lightweight & Fast** — Minimal dependencies, optimized performance
+
+<p align="center">
+  <img src="docs/images/features-overview.png" alt="SysCrypt Features" width="600"/>
+</p>
 
 ---
 
@@ -121,12 +129,20 @@ The app follows a **Strategy Pattern** for cryptographic operations, making it e
 
 ## 📱 Usage
 
+<p align="center">
+  <img src="docs/images/how-to-use.png" alt="How to Use SysCrypt" width="650"/>
+</p>
+
 1. **Enter your secret key** in the key input field
 2. **Select an encryption algorithm** from the dropdown (AES, DES, RSA, or Blowfish)
 3. **Type in the plain text field** — encrypted output appears automatically below
 4. **Or paste encrypted text** in the bottom field — decrypted text appears above
 
 > 💡 **Tip:** The encryption/decryption happens in real-time as you type!
+
+<p align="center">
+  <img src="docs/images/app-screenshot.jpg" alt="SysCrypt App Screenshot" width="300"/>
+</p>
 
 ---
 
